@@ -2,9 +2,13 @@ import React from 'react';
 import {StyleSheet, Text, View, FlatList, TextInput, KeyboardAvoidingView, TouchableOpacity} from 'react-native';
 import {send, subscribe} from 'react-native-training-chat-server';
 import ReversedFlatList from 'react-native-reversed-flat-list';
+import Header from './Header';
+import reactToString from 'react-to-string';
 
-const NAME = 'Me';
-const CHANNEL = 'pls';
+const DATE = new Date;
+const DATESTRING = DATE.toDateString();
+const NAME = '';
+const CHANNEL = DATESTRING;
 
 export default class App extends React.Component {
   state = {
@@ -44,6 +48,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <Header title={CHANNEL} />
         <ReversedFlatList data={this.state.messages} renderItem={this.renderItem} />
           <KeyboardAvoidingView behavior="padding">
           <View style={styles.footer}>
@@ -52,7 +57,7 @@ export default class App extends React.Component {
               onChangeText={text => this.setState({typing: text})}
               style={styles.input}
               underlineColorAndroid="transparent"
-              placeholder="Type something nice"
+              placeholder="Write something here..."
             />
               <TouchableOpacity onPress={this.sendMessage.bind(this)}>
                <Text style={styles.send}>Send</Text>
