@@ -4,7 +4,7 @@ import { Constants } from 'expo';
 
 export default class App extends React.Component {
   state = {
-    inputValue: "Holy !"
+    inputValue: "Write something..."
   };
 
   _handleTextChange = inputValue => {
@@ -16,7 +16,7 @@ export default class App extends React.Component {
       <View style={styles.container}>
       
         <Text style={styles.paragraph}>
-          Journal entry
+          Journal Entry
         </Text>
         
         <View style={styles.box}>
