@@ -3,7 +3,7 @@ import {StyleSheet, Text, View, FlatList, TextInput, KeyboardAvoidingView, Touch
 import {send, subscribe} from 'react-native-training-chat-server';
 import ReversedFlatList from 'react-native-reversed-flat-list';
 
-const NAME = '';
+const NAME = 'Me';
 const CHANNEL = 'pls';
 
 export default class App extends React.Component {
