@@ -11,6 +11,9 @@ const NAME = 'Me';
 const CHANNEL = DATESTRING;
 const ME_AVATAR = 'https://i.ytimg.com/vi/Q4ZIKzRSc0s/hqdefault.jpg';
 const BOT_AVATAR = 'https://i.ytimg.com/vi/I04OIfbBrTg/hqdefault.jpg?sqp=-oaymwEWCKgBEF5IWvKriqkDCQgBFQAAiEIYAQ==&rs=AOn4CLCAIAqgbtPKAQQS1mHdmefcigLktg';
+let prompts = [
+  'Write about a missed opportunity you wish you had taken. What could you do differently next time?',
+];
 
 export default class App extends React.Component {
 
@@ -67,6 +70,10 @@ export default class App extends React.Component {
       <View style={styles.container}>
         <Header title={CHANNEL} />
 
+        <View style={styles.row}>
+          <Text style={styles.prompt}>{prompts[0]}</Text>
+        </View>
+
         <ReversedFlatList data={this.state.messages} renderItem={this.renderItem} />
 
         <KeyboardAvoidingView behavior="padding">
@@ -94,16 +101,23 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   row: {
-    padding: 20,
+    flexDirection: 'row',
+    padding: 10,
     borderBottomWidth: 1,
     borderBottomColor: '#eee',
   },
-  message: {
+  prompt: {
     fontSize: 18,
+    padding: 5,
+    textAlign: 'center',
+  },
+  message: {
+    fontSize: 15,
+    paddingRight: 30,
   },
   sender: {
     fontWeight: 'bold',
-    paddingRight: 10,
+    paddingRight: 30,
   },
   footer: {
     flexDirection: 'row',
