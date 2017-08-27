@@ -8,6 +8,7 @@ import reactToString from 'react-to-string';
 const DATE = new Date;
 const DATESTRING = DATE.toDateString();
 const NAME = 'Me';
+// existing channels: lol, DATESTRING for Aug 27, qwer
 const CHANNEL = 'qwer';
 const ME_AVATAR = 'https://i.ytimg.com/vi/Q4ZIKzRSc0s/hqdefault.jpg';
 const BOT_AVATAR = 'https://i.ytimg.com/vi/I04OIfbBrTg/hqdefault.jpg?sqp=-oaymwEWCKgBEF5IWvKriqkDCQgBFQAAiEIYAQ==&rs=AOn4CLCAIAqgbtPKAQQS1mHdmefcigLktg';
