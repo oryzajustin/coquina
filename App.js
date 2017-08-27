@@ -8,7 +8,7 @@ import reactToString from 'react-to-string';
 const DATE = new Date;
 const DATESTRING = DATE.toDateString();
 const NAME = 'Me';
-const CHANNEL = DATESTRING;
+const CHANNEL = 'qwer';
 const ME_AVATAR = 'https://i.ytimg.com/vi/Q4ZIKzRSc0s/hqdefault.jpg';
 const BOT_AVATAR = 'https://i.ytimg.com/vi/I04OIfbBrTg/hqdefault.jpg?sqp=-oaymwEWCKgBEF5IWvKriqkDCQgBFQAAiEIYAQ==&rs=AOn4CLCAIAqgbtPKAQQS1mHdmefcigLktg';
 let prompts = [
@@ -39,7 +39,7 @@ export default class App extends React.Component {
 
     await send({
       channel: CHANNEL,
-      sender: 'Bot',
+      sender: 'Journal Botman',
       message: 'My man!',
       avatar: BOT_AVATAR,
     });
@@ -68,7 +68,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Header title={CHANNEL} />
+        <Header title={DATESTRING} />
 
         <View style={styles.row}>
           <Text style={styles.prompt}>{prompts[0]}</Text>
